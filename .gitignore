@@ -1,0 +1,26 @@
+# Raw and processed data
+/data/PADS/
+/data/raw/
+/data/processed/
+*.zip
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temporary outputs
+*.tmp
+*.log
