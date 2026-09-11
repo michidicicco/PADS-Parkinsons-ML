@@ -1,0 +1,45 @@
+# Data
+
+This project uses the **Parkinson’s Disease Smartwatch (PADS) dataset**, a publicly available dataset of smartwatch accelerometer and gyroscope recordings.
+
+## Source
+
+Varghese, J., Brenner, A., Fujarski, M., van Alen, C. M., Plagwitz, L., & Warnecke, T.  
+**Machine Learning in the Parkinson’s disease smartwatch (PADS) dataset.**  
+*npj Parkinson’s Disease*, 10, 9 (2024).  
+DOI: **10.1038/s41531-023-00625-7**
+
+Dataset DOI: **10.13026/m0w9-zx22**
+
+## Cohort Used in This Project
+
+The full PADS dataset contains 469 participants representing Parkinson’s disease, healthy controls, and other neurological diagnoses. The primary analysis in this repository includes only Parkinson’s disease and healthy-control participants:
+
+- 276 Parkinson’s disease participants
+- 79 healthy controls
+- 355 participants total
+- 11 standardized motor tasks
+- left- and right-wrist recordings
+- 7,810 total recordings
+
+## Local Data Structure
+
+The raw PADS dataset is intentionally **not committed to GitHub**. After downloading it from the original source, place it locally under:
+
+```text
+data/PADS/
+```
+
+The analysis expects the PADS directory to contain the original dataset folders, including participant metadata and movement recordings.
+
+## Model-Ready Data
+
+`02_feature_extraction.ipynb` generates the model-ready feature table:
+
+```text
+outputs/tables/pads_recording_features.csv
+```
+
+The generated table contains 7,810 recording-level rows, participant/task/wrist metadata, class labels, and 96 sensor-derived numerical predictors. Quality checks in the feature-extraction workflow verified that the final labeled table contained no missing labels, NaN numerical values, or infinite numerical values.
+
+Raw data should be obtained from the original PADS source rather than redistributed through this repository.
